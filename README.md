@@ -14,4 +14,3 @@ Dependencies To Add In pubspec.yaml:
 
 Command To Create Hive Database Adapter
   "flutter pub run build_runner build"
--------------------------------------------------------------------------------------
