@@ -1,3 +1,3 @@
-# todolist
+# Todo Flutter App
 
-A new Flutter project.
+Todo app created in flutter using Hive database.
