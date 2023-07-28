@@ -2,7 +2,6 @@
 
 Todo app created in flutter using Hive database.
 
--------------------------------------------------------------------------------------
 Dependencies To Add In pubspec.yaml:
 [dependencies]
   hive: ^2.2.3
@@ -12,9 +11,7 @@ Dependencies To Add In pubspec.yaml:
 [dev_dependencies]
   hive_generator: ^2.0.0
   build_runner: ^2.4.6
--------------------------------------------------------------------------------------
 
--------------------------------------------------------------------------------------
 Command To Create Hive Database Adapter
   "flutter pub run build_runner build"
 -------------------------------------------------------------------------------------
