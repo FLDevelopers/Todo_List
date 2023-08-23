@@ -24,17 +24,29 @@ class _MainPageState extends State<MainPage> {
       body: ValueListenableBuilder(
         valueListenable: _todoBox.listenable(),
         builder: (context, Box<TodoModel> box, _) {
-          return ListView.builder(
-            itemCount: box.length,
-            itemBuilder: (context, index) {
-              final todo = box.getAt(index)!;
-              return TodoListTile(
-                todo: todo,
-                index: index,
-                onDelete: _deleteTodo,
-              );
-            },
-          );
+          //check if list is empty
+          if(box.length != 0) {
+            return Padding(
+              padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+              child: ListView.builder(
+                itemCount: box.length,
+                itemBuilder: (context, index) {
+                  final todo = box.getAt(index)!;
+                  return TodoListTile(
+                    todo: todo,
+                    index: index,
+                    onDelete: _deleteTodo,
+                  );
+                },
+              ),
+            );
+          }
+          //text when list is empty
+          else {
+            return const Center(
+              child: Text("Press the \"+\" button at the bottom right to add todo."),
+            );
+          }
         },
       ),
       floatingActionButton: CustomFloatingActionButton(

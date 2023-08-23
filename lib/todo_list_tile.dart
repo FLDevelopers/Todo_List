@@ -69,6 +69,10 @@ class TodoListTile extends StatelessWidget {
           );
           Hive.box<TodoModel>('todos').putAt(index, newTodo);
         },
+        //tile long press delete
+        onLongPress: () {
+          _showDeleteConfirmationDialog(context);
+        },
         trailing: IconButton(
           icon: const Icon(Icons.delete),
           onPressed: () => _showDeleteConfirmationDialog(
